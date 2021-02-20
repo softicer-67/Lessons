@@ -13,7 +13,7 @@ def get_jokes(nums):
         a = random.choice(nouns)
         b = random.choice(adverbs)
         c = random.choice(adjectives)
-        res.append(f'{a.capitalize()} {b} {c}')
+        res.append(f'{a.title()} {b} {c}')
     print(res)
 
 
