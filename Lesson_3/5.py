@@ -6,13 +6,15 @@ adjectives = ["веселый", "яркий", "зеленый", "утопичн�
 
 
 def get_jokes(nums):
+    res = []
     """функция возвращает n шуток, сформированных из случайных слов,
     взятых из трёх списков"""
     for i in range(nums):
         a = random.choice(nouns)
         b = random.choice(adverbs)
         c = random.choice(adjectives)
-        print(a.capitalize(), b, c)
+        res.append(f'{a.capitalize()} {b} {c}')
+    print(res)
 
 
-get_jokes(2)
+get_jokes(3)
