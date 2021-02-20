@@ -8,18 +8,18 @@ v = soup.find_all('value')
 
 
 def currency_rates(code):
-    if code == 'usd':
+    if code.lower() == 'usd':
         usd = str(v[10:11])
         usd = usd[8:13]
         print(f'Доллар США = {usd} руб.')
-    elif code == 'eur':
+    elif code.lower() == 'eur':
         eur = str(v[11:12])
         eur = eur[8:13]
-        print(f'Евро = {eur} руб.')
+        print(f'Евро       = {eur} руб.')
     else:
         print('None')
 
 
 currency_rates('usd')
-currency_rates('eur')
+currency_rates('EUR')
 currency_rates('rub')
