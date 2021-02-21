@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+from colorama import Fore, Style
 
 
 url = requests.get('http://www.cbr.ru/scripts/XML_daily.asp')
@@ -7,7 +8,7 @@ soup = BeautifulSoup(url.text, 'lxml')
 v = soup.find_all('value')
 date = soup.find_all('valcurs')
 date = str(date[0])
-date = f'\nДата {date[14:26]}\n'
+date = f'\nДата {Fore.RED}{date[14:26]}{Style.RESET_ALL}\n'
 
 
 def currency_rates(code):
@@ -16,11 +17,11 @@ def currency_rates(code):
     elif code.lower() == 'usd':
         usd = str(v[10:11])
         usd = usd[8:13]
-        print(f'Доллар США = {usd} руб.')
+        print(f'Доллар США = {Fore.BLUE}{usd}{Style.RESET_ALL} руб.')
     elif code.lower() == 'eur':
         eur = str(v[11:12])
         eur = eur[8:13]
-        print(f'Евро       = {eur} руб.')
+        print(f'Евро       = {Fore.BLUE}{eur}{Style.RESET_ALL} руб.')
     else:
         print('None')
 
