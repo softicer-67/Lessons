@@ -1,6 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-from colorama import Fore, Style
 
 
 link = requests.get('http://www.cbr.ru/scripts/XML_daily.asp').text
@@ -12,9 +11,9 @@ eur = str(soup.find(id='R01239')).split('>')
 
 def currency_rates(code):
     if code.lower() == 'usd':
-        print(f'Доллар США = {Fore.BLUE}{usd[10][:5]}{Style.RESET_ALL} руб.')
+        print(f'Доллар США = {usd[10][:5]} руб.')
     elif code.lower() == 'eur':
-        print(f'Евро       = {Fore.BLUE}{eur[10][:5]}{Style.RESET_ALL} руб.')
+        print(f'Евро       = {eur[10][:5]} руб.')
     else:
         print('None')
 
