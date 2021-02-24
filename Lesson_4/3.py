@@ -23,6 +23,6 @@ def currency_rates(code):
 
 
 currency_rates('Date')
-currency_rates('usd')
+currency_rates('usD')
 currency_rates('EUR')
 currency_rates('rub')
