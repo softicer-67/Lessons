@@ -15,3 +15,4 @@ print(next(new_gen))
 print(next(new_gen))
 print(next(new_gen))
 print(type(new_gen))
+
