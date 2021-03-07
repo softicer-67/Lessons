@@ -19,6 +19,6 @@ with open('nginx_logs.txt', 'r') as f:
 
     repeat = list(repeat.items())
     repeat.sort(reverse=True, key=lambda ip: ip[1])
-    print(f'IP: {repeat[0][0]}, повторов: {repeat[0][1]} <---- Самый могучий Спамер ;-)')
-    print(f'IP: {repeat[1][0]}, повторов: {repeat[1][1]}')
-    print(f'IP: {repeat[2][0]}, повторов: {repeat[2][1]}')
+    print(f'с IP: {repeat[0][0]}, отправлено запросов: {repeat[0][1]} <---- Самый могучий Спамер ;-)')
+    print(f'с IP: {repeat[1][0]}, отправлено запросов: {repeat[1][1]}')
+    print(f'с IP: {repeat[2][0]}, отправлено запросов: {repeat[2][1]}')
