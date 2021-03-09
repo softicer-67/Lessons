@@ -14,6 +14,7 @@ if len(hobby) > len(user):
     exit(1)
 
 else:
+
     for i in range(len(user)):
         try:
             res[user[i]] = hobby[i]
