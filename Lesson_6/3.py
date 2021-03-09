@@ -9,17 +9,16 @@ with open('hobby.csv', 'r', encoding='utf-8-sig') as i:
 
 
 res = {}
-for i in range(len(user)):
-    try:
-        res[user[i]] = hobby[i]
-    except IndexError:
-        res[user[i]] = None
 
-for i in range(len(hobby)):
-    try:
-        res[user[i]] = hobby[i]
-    except IndexError:
-        exit(1)
+if len(hobby) > len(user):
+    exit(1)
+
+else:
+    for i in range(len(user)):
+        try:
+            res[user[i]] = hobby[i]
+        except IndexError:
+            res[user[i]] = None
 
 print(res)
 
