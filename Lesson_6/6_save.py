@@ -7,7 +7,7 @@ while True:
         print('Это не число! Попробуйте еще: ')
     else:
         lines = 1
-        with open('bakery.csv', 'r+', encoding='utf-8') as f:
-            for line in f:
+        with open('shop.txt', mode='r+', encoding='utf-8') as file:
+            for line in file:
                 lines += 1
-            f.write(f'{lines}: {save}\n')
+            file.write(f'{lines}: {save}\n')

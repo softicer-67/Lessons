@@ -1,14 +1,14 @@
 
 with open('nginx_logs.txt', 'r') as f:
     full = []
-    for i in f:
-        x = i.split(' ')
+    for line in f:
+        x = line.split(' ')
         full.append(x[0])
 
     uni_ip = []
-    for j in full:
-        if j not in uni_ip:
-            uni_ip.append(j)
+    for i in full:
+        if i not in uni_ip:
+            uni_ip.append(i)
 
     repeat = {}
     for i in uni_ip:

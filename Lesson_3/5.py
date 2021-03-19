@@ -17,4 +17,4 @@ def get_jokes(nums):
     print(res)
 
 
-get_jokes(3)
+get_jokes(2)
