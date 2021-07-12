@@ -14,6 +14,10 @@ letter2 = alpha.index(b) + 1
 # подсчитываем колличество между бувами
 interval = letter2 - letter1 - 1
 
+# проверка на случай если буквы указаны не по возрастанию
+if letter2 < letter1:
+    interval = letter1 - letter2 - 1
+
 # исправим на правильное написание слов
 text = []
 if interval % 10 in [1]:
