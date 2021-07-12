@@ -30,6 +30,8 @@ while option != '0':
         print(float(random.randrange(100)))
     elif option == '3':
         print(random.choice('abcdef'))
+    else:
+        print('Только [1], [2], [3] или [0]')
 
     if __name__ == '__main__':
         option = input()
