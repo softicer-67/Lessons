@@ -8,7 +8,7 @@ y1 = int(input('\ty1 = '))
 
 print('Координаты точки B(x2,y2): ')
 x2 = int(input('\tx2 = '))
-y2 = int(input("\ty2 = "))
+y2 = int(input('\ty2 = '))
 
 print('Уравнение прямой, проходящей через эти точки: ')
 k = (y1 - y2) / (x1 - x2)
