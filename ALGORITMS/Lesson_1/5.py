@@ -2,11 +2,11 @@
 5. Пользователь вводит две буквы. Определить, на каких местах алфавита они стоят и сколько между ними находится букв.
 """
 
-# alphabet = 'abcdefghijklmnopqrstuvwxyz'
-#
-# a, b = input('Введите 2 буквы латинского алфавита: ')
-#
-# x = len(alphabet)
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
-number = input('Введите число: ')
+a, b = input('Введите 2 буквы латинского алфавита: ')
+
+x = len(alphabet)
+
+
 
