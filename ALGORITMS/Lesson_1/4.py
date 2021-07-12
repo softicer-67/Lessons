@@ -27,7 +27,7 @@ while option != '0':
     if option == '1':
         print(random.randint(1, 100))
     elif option == '2':
-        print(float(random.randrange(101)))
+        print(float(random.randrange(100)))
     elif option == '3':
         print(random.choice('abcdef'))
 
