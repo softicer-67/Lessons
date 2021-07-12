@@ -4,3 +4,14 @@
 Объяснить полученный результат.
 """
 
+
+a = 5
+print(a, '=', bin(a)[2:])
+b = 6
+print(b, '=', bin(b)[2:])
+
+print(f'a & b: {a & b} = {bin(a & b)}')
+print(f'a ^ b: {a ^ b} = {bin(a ^ b)}')
+print(f'a | b: {a | b} = {bin(a | b)}')
+print(f'{b} << 2: {b << 2} = {bin(b << 2)}')
+print(f'{b} >> 2: {b >> 2} = {bin(b >> 2)}')
