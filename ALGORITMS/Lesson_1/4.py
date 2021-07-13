@@ -23,8 +23,7 @@ def num_choice():
     print('Введите интервал: ')
     a = int(input('Первое число: '))
     b = int(input('Второе число: '))
-    res = random.randint(a, b)
-    return res
+    return random.randint(a, b)
 
 
 def alpha_choice():
