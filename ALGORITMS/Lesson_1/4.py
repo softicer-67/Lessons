@@ -23,6 +23,8 @@ def num_choice():
     print('Введите интервал: ')
     a = int(input('Первое число: '))
     b = int(input('Второе число: '))
+    if a > b:
+        return random.randint(b, a)
     return random.randint(a, b)
 
 
@@ -31,6 +33,8 @@ def alpha_choice():
     c = input('Первая буква: ')
     d = input('Вторая буква: ')
     list_abc = [chr(i) for i in range(ord(c), ord(d) + 1)]
+    if ord(c) > ord(d):
+        list_abc = [chr(i) for i in range(ord(d), ord(c) + 1)]
     return random.choice(list_abc)
 
 
