@@ -30,8 +30,8 @@ def num_choice():
 
 def alpha_choice():
     print('Введите интервал: ')
-    c = input('Первая буква: ')
-    d = input('Вторая буква: ')
+    c = str(input('Первая буква: '))
+    d = str(input('Вторая буква: '))
     list_abc = [chr(i) for i in range(ord(c), ord(d) + 1)]
     if ord(c) > ord(d):
         list_abc = [chr(i) for i in range(ord(d), ord(c) + 1)]
@@ -43,13 +43,19 @@ option = input()
 
 while option != '0':
     if option == '1':
-        print(num_choice())
+        try:
+            print(num_choice())
+        except ValueError as e:
+            print(e)
     elif option == '2':
-        print(float(num_choice()))
+        try:
+            print(float(num_choice()))
+        except ValueError as e:
+            print(e)
     elif option == '3':
         print(alpha_choice())
-    else:
-        print('Только [1], [2], [3] или [0]')
+
+    print('Меню: [1], [2], [3] или [0]')
 
     if __name__ == '__main__':
         option = input()
