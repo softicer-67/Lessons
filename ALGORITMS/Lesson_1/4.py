@@ -19,16 +19,32 @@ def menu():
     [0] Выход')
 
 
+def num_choice():
+    print('Введите интервал: ')
+    a = int(input('Первое число: '))
+    b = int(input('Второе число: '))
+    res = random.randint(a, b)
+    return res
+
+
+def alpha_choice():
+    print('Введите интервал: ')
+    c = input('Первая буква: ')
+    d = input('Вторая буква: ')
+    list_abc = [chr(i) for i in range(ord(c), ord(d) + 1)]
+    return random.choice(list_abc)
+
+
 menu()
 option = input()
 
 while option != '0':
     if option == '1':
-        print(random.randint(1, 100))
+        print(num_choice())
     elif option == '2':
-        print(float(random.randrange(100)))
+        print(float(num_choice()))
     elif option == '3':
-        print(random.choice('abcdef'))
+        print(alpha_choice())
     else:
         print('Только [1], [2], [3] или [0]')
 
