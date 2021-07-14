@@ -20,7 +20,7 @@ def menu():
 
 
 def num_choice():
-    print('Введите интервал: ')
+    print('Задайте границы диапазона: ')
     a = int(input('Первое число: '))
     b = int(input('Второе число: '))
     if a > b:
@@ -29,13 +29,16 @@ def num_choice():
 
 
 def alpha_choice():
-    print('Введите интервал: ')
-    c = str(input('Первая буква: '))
-    d = str(input('Вторая буква: '))
-    list_abc = [chr(i) for i in range(ord(c), ord(d) + 1)]
-    if ord(c) > ord(d):
-        list_abc = [chr(i) for i in range(ord(d), ord(c) + 1)]
-    return random.choice(list_abc)
+    print('Задайте границы диапазона: ')
+    c = input('Первая буква: ')
+    d = input('Вторая буква: ')
+    if c.isdigit() or d.isdigit():
+        return '\nОшибка ввода!\n'
+    else:
+        list_abc = [chr(i) for i in range(ord(c), ord(d) + 1)]
+        if ord(c) > ord(d):
+            list_abc = [chr(i) for i in range(ord(d), ord(c) + 1)]
+        return random.choice(list_abc)
 
 
 menu()
@@ -45,13 +48,13 @@ while option != '0':
     if option == '1':
         try:
             print(num_choice())
-        except ValueError as e:
-            print(e)
+        except ValueError:
+            print('\nОшибка ввода!\n')
     elif option == '2':
         try:
             print(float(num_choice()))
-        except ValueError as e:
-            print(e)
+        except ValueError:
+            print('\nОшибка ввода!\n')
     elif option == '3':
         print(alpha_choice())
 
@@ -59,9 +62,3 @@ while option != '0':
 
     if __name__ == '__main__':
         option = input()
-
-
-
-
-
-
