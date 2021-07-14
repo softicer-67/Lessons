@@ -32,13 +32,13 @@ def alpha_choice():
     print('Задайте границы диапазона: ')
     c = input('Первая буква: ')
     d = input('Вторая буква: ')
-    if c.isdigit() or d.isdigit():
-        return '\nОшибка ввода!\n'
+    if c == '' or d == '' or c.isdigit() or d.isdigit():
+        res = '\nОшибка ввода!\n'
+    elif ord(c) < ord(d):
+        res = random.choice([chr(i) for i in range(ord(c), ord(d) + 1)])
     else:
-        list_abc = [chr(i) for i in range(ord(c), ord(d) + 1)]
-        if ord(c) > ord(d):
-            list_abc = [chr(i) for i in range(ord(d), ord(c) + 1)]
-        return random.choice(list_abc)
+        res = random.choice([chr(i) for i in range(ord(d), ord(c) + 1)])
+    return res
 
 
 menu()
