@@ -33,3 +33,4 @@ while option != '0':
         print('Ошибка, введите правильный  символ:')
     menu()
     option = input()
+
