@@ -5,19 +5,14 @@
 
 
 n = int(input('Введите количество элементов: '))
-i = 0
-range_number = 1
+
+N = 0
+range = 1
 sum = 0
-while i < n:
-    sum += range_number
-    range_number /= -2
-    i += 1
 
-print(f'Сумма {sum}')
+while N < n:
+    sum += range
+    range /= -2
+    N += 1
 
-nums = 1, -0.5, 0.25, -0.125
-n1 = int(input('Введите количество элементов: '))
-for i in nums:
-    res = sum(n1)
-    print(res)
-
+print('Сумма', sum)
