@@ -8,4 +8,4 @@ for i in range(2, 10):
     for j in range(2, 100):
         if j % i == 0:
             res[i].append(j)
-    print(f'Числу {i} кратны {len(res[i])} чисел: {res[i]}.')
+    print(f'Числу {i} кратны {len(res[i])} чисел: {res[i]}')
