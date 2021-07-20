@@ -10,5 +10,5 @@ result = 0
 for i in number:
     if i == numeral:
         result += 1
-print(f'В числе {number} цифр {numeral} = {result} шт.')
+print(f'В числе {number} цифра {numeral} встречается {result} раз.')
 
